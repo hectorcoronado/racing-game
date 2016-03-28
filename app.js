@@ -21,6 +21,7 @@ $(document).on('ready', function() {
 
       if (redPlayerMargin >= redTrackWidth - 400) {
         alert('You win, big red pixel!');
+        $('.pop-up').show(250);
       }
     }
   });
@@ -38,10 +39,14 @@ $(document).on('ready', function() {
       var bluePlayerMargin = ( parseInt( $('.bluePlayer').css('left') ) );
       console.log ("Red is currently at: " + bluePlayerMargin);
 
+      //Possible solution would be to set winning condition to
+      //'position', not to ''
+
       $('.bluePlayer').animate ( { 'left' : '+=75'}, 'linear');
 
       if (bluePlayerMargin >= blueTrackWidth - 400) {
         alert ('You win, big blue pixel!');
+        $('.pop-up').show(250);
       }
 
     }
