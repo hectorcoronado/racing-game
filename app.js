@@ -1,8 +1,6 @@
 console.log("app.js loaded");
 
-
 $(document).on('ready', function() {
-
 
   var $redPlayer = $('.redPlayer'),
     $bluePlayer = $('.bluePlayer'),
@@ -11,7 +9,6 @@ $(document).on('ready', function() {
     blueKeycode,
     redLetter,
     blueLetter;
-
 
   function redRandomLetter() {
     var num = Math.floor(Math.random() * 4) + 1;
@@ -28,7 +25,7 @@ $(document).on('ready', function() {
       redLetter = 'F';
       redKeycode = 70;
     }
-    $redPlayer.append('<p>' + redLetter + '</p>');
+    $redPlayer.append('<h6>' + redLetter + '</h6>');
   }
 
   function blueRandomLetter() {
@@ -46,9 +43,8 @@ $(document).on('ready', function() {
       blueLetter = ';';
       blueKeycode = 186;
     }
-    $bluePlayer.append('<p>' + blueLetter + '</p>');
+    $bluePlayer.append('<h6>' + blueLetter + '</h6>');
   }
-
 
   redRandomLetter();
   blueRandomLetter();

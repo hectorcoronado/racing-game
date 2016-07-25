@@ -1,3 +1,20 @@
+/*
+font-family: 'Play', sans-serif;
+font-family: 'Space Mono', monospace;
+font-family: 'Press Start 2P', cursive;
+*/
+
+
+
+h6 {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .text-center {
   margin: 20px auto;
 }
@@ -18,7 +35,7 @@
   background-color: red;
   position: relative;
   margin-top: 18px;
-}
+font-family: 'Press Start 2P', cursive;}
 
 .bluePlayer {
   width: 38px;
@@ -26,4 +43,8 @@
   background-color: blue;
   position: relative;
   margin-top: 18px;
+font-family: 'Press Start 2P', cursive;}
+
+#main-title {
+  font-family: 'Press Start 2P', cursive;
 }
