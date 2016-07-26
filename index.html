@@ -40,24 +40,36 @@
     <div class="page-header">
       <div class="text-center" id="main-title">
         <h1>Big Pixel Derby!</h1>
-        <h3>Hit the key that you see on your respective pixel to advance it!</h3>
+        <ul>
+          <li><h5>First: enter your names by pressing the button below!</h5></li>
+          <li><h5>Then: you must press the random key that will appear on your pixel</h5></li>
+        </ul>
       </div>
 
     </div>
 
 
-    <div id="playerOneName">
+    <div id="redPlayerName">
       <p>Player One</p>
     </div>
     <div class="track">
       <div class="redPlayer"></div>
-    </div>
+    </div><br>
 
-    <div id="playerTwoName">
+    <div id="bluePlayerName">
       <p>Player Two</p>
     </div>
     <div class="track">
       <div class="bluePlayer"></div>
+    </div>
+
+    <!-- HIDDEN / POP-UP DIV -->
+    <div class='pop-up' style="display: none">
+      <h3>Congratulations on your glorious victory.</h3>
+      <p>
+        Thank you for playing! This project was partly inspired by
+        <a href="https://vimeo.com/85040589">this</a> video...
+      </p>
     </div>
 
 
@@ -65,7 +77,7 @@
       <div class="container text-center">
         <div class="btn-group" role="group">
           <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#playerNamesModal">Enter Player Names</button>
-          <button type="button" class="btn btn-default navbar-btn">Reset Game</button>
+          <button type="button" class="btn btn-default navbar-btn" id="reset">Reset Game</button>
           <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#aboutModal">About</button>
         </div>
       </div>
@@ -120,22 +132,7 @@
     </div>
 
 
-    <!-- HIDDEN / POP-UP DIV -->
-    <div class='pop-up' style="display: none">
-      <h3>Congratulations on your glorious victory.</h3>
-      <p>
-        Your prize is you get to watch
-        <a href="https://vimeo.com/85040589">this</a> vid...
-        <br/>
-        <br/>
-        <br/>
-        <br/> "Tomorrow, and tomorrow, and tomorrow,
-        <br/> Loops o'er this petty code in endless mire,
-        <br/> To the last iteration of recorded time;
-        <br/> And all our tests have long since found
-        <br/> Their way to dusty death..." -William Shakespeare
-      </p>
-    </div>
+
 
   </div>
   </div>

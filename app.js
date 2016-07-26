@@ -4,12 +4,14 @@ $(document).on('ready', function() {
 
   var $redPlayer = $('.redPlayer'),
     $bluePlayer = $('.bluePlayer'),
+    $redPlayerName = $('#redPlayerName'),
+    $bluePlayerName = $('#bluePlayerName'),
     $popUp = $('.pop-up'),
     redKeycode,
     blueKeycode,
     redLetter,
-    blueLetter;
-  var redPlayerPosition = parseInt($redPlayer.css('left'));
+    blueLetter,
+    winnerName;
 
   function redRandomLetter() {
     var num = Math.floor(Math.random() * 4) + 1;
@@ -47,10 +49,8 @@ $(document).on('ready', function() {
     $bluePlayer.append('<h6>' + blueLetter + '</h6>');
   }
 
-  redRandomLetter();
-  blueRandomLetter();
-
   $(window).keyup(function() {
+    var redPlayerPosition = parseInt($redPlayer.css('left'));
     if (event.which === redKeycode) {
       if (redPlayerPosition < 960) {
         $redPlayer.animate({
@@ -59,14 +59,18 @@ $(document).on('ready', function() {
         $redPlayer.empty();
         redRandomLetter();
       } else {
-        $popUp.show();
+        $redPlayer.empty();
+        $bluePlayer.empty();
+        redKeycode = false;
+        blueKeycode = false;
+        $popUp.fadeIn(1000);
       }
     }
   });
 
   $(window).keyup(function() {
+    var bluePlayerPosition = parseInt($bluePlayer.css('left'));
     if (event.which === blueKeycode) {
-      var bluePlayerPosition = parseInt($bluePlayer.css('left'));
       if (bluePlayerPosition < 960) {
         $bluePlayer.animate({
           'left': '+=20'
@@ -74,7 +78,11 @@ $(document).on('ready', function() {
         $bluePlayer.empty();
         blueRandomLetter();
       } else {
-        $popUp.show();
+        $redPlayer.empty();
+        $bluePlayer.empty();
+        redKeycode = false;
+        blueKeycode = false;
+        $popUp.fadeIn(1000);
       }
     }
   });
@@ -83,9 +91,33 @@ $(document).on('ready', function() {
     event.preventDefault();
     player1Name = $('#player1Name').val();
     player2Name = $('#player2Name').val();
-    $('#player1').html(player1Name);
-    $('#player2').html(player2Name);
+    $redPlayerName.html(player1Name);
+    $bluePlayerName.html(player2Name);
     $('#playerNamesModal').modal('toggle');
+    redRandomLetter();
+    blueRandomLetter();
   });
+
+  $('#reset').on('click', function(event) {
+    event.preventDefault();
+    resetGame();
+  });
+
+  function resetGame() {
+    $redPlayer.css({'left': '0'}).empty();
+    $bluePlayer.css({'left': '0'}).empty();
+    $redPlayerName.html("Player One");
+    $bluePlayerName.html("Player Two");
+    $popUp.fadeOut(1200);
+  }
+
+  function winner () {
+    $redPlayer.empty();
+    $bluePlayer.empty();
+    redKeycode = false;
+    blueKeycode = false;
+    $popUp.fadeIn(1000);
+  }
+
 
 });
