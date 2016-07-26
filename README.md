@@ -1,5 +1,8 @@
 # Big Pixel Derby!
 ## GA WDI 28 Project 0
+## Play the game:
+
+https://hectorcoronado.github.io/racing-game/
 
 ------------------
 ### Technologies:
