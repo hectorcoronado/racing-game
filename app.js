@@ -59,11 +59,9 @@ $(document).on('ready', function() {
         $redPlayer.empty();
         redRandomLetter();
       } else {
-        $redPlayer.empty();
-        $bluePlayer.empty();
-        redKeycode = false;
-        blueKeycode = false;
-        $popUp.fadeIn(1000);
+        winnerName = player1Name;
+        $('#winner-name').append(winnerName);
+        winner();
       }
     }
   });
@@ -78,11 +76,9 @@ $(document).on('ready', function() {
         $bluePlayer.empty();
         blueRandomLetter();
       } else {
-        $redPlayer.empty();
-        $bluePlayer.empty();
-        redKeycode = false;
-        blueKeycode = false;
-        $popUp.fadeIn(1000);
+        winnerName = player2Name;
+        $('#winner-name').append(winnerName);
+        winner();
       }
     }
   });

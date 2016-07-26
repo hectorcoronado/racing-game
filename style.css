@@ -4,7 +4,6 @@ font-family: 'Space Mono', monospace;
 font-family: 'Press Start 2P', cursive;
 */
 
-
 body {
   background-color: #F8F9F4;
 }
@@ -19,7 +18,7 @@ h6 {
 }
 
 ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 .text-center {
@@ -38,9 +37,8 @@ ul {
   margin: 0 auto;
 }
 
-.btn-default {
+.btn {
   background-color: #9ECECE;
-
 }
 
 .track {
@@ -50,20 +48,53 @@ ul {
   width: 1000px;
   margin-left: auto;
   margin-right: auto;
-
 }
 
 .modal {
   font-family: 'Space Mono', monospace;
 }
 
+.modal-body {
+  background-color: #F8F9F4;
+}
+
+.modal-content {
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  background-color: #C7E9E9;
+}
+
+.modal-footer {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  -webkit-border-bottom-left-radius: 6px;
+  -webkit-border-bottom-right-radius: 6px;
+  -moz-border-radius-bottomleft: 6px;
+  -moz-border-radius-bottomright: 6px;
+}
+
+.modal-header {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  -webkit-border-top-left-radius: 6px;
+  -webkit-border-top-right-radius: 6px;
+  -moz-border-radius-topleft: 6px;
+  -moz-border-radius-topright: 6px;
+}
+
+.pop-up {
+  font-family: 'Space Mono', monospace;
+}
+
 .redPlayer {
-  width:38px;
+  width: 38px;
   height: 38px;
   background-color: #BF2500;
   position: relative;
   margin-top: 18px;
-font-family: 'Press Start 2P', cursive;}
+  font-family: 'Press Start 2P', cursive;
+}
 
 .bluePlayer {
   width: 38px;
