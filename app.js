@@ -9,6 +9,7 @@ $(document).on('ready', function() {
     blueKeycode,
     redLetter,
     blueLetter;
+  var redPlayerPosition = parseInt($redPlayer.css('left'));
 
   function redRandomLetter() {
     var num = Math.floor(Math.random() * 4) + 1;
@@ -51,7 +52,6 @@ $(document).on('ready', function() {
 
   $(window).keyup(function() {
     if (event.which === redKeycode) {
-      var redPlayerPosition = parseInt($redPlayer.css('left'));
       if (redPlayerPosition < 960) {
         $redPlayer.animate({
           'left': '+=20'
@@ -77,6 +77,15 @@ $(document).on('ready', function() {
         $popUp.show();
       }
     }
+  });
+
+  $('#namesForm').on('submit', function(event) {
+    event.preventDefault();
+    player1Name = $('#player1Name').val();
+    player2Name = $('#player2Name').val();
+    $('#player1').html(player1Name);
+    $('#player2').html(player2Name);
+    $('#playerNamesModal').modal('toggle');
   });
 
 });
